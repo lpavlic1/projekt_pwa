@@ -23,13 +23,45 @@
         <label for="korisnicko_ime">Korisnicko ime:</label>
         <br>
         <input type="text" name="korisnicko_ime" id="korisnicko_ime">
+        <span class="errorMsg" id="errorUname"></span>
         <br>
         <label for="password">Lozinka:</label>
         <br>
         <input  type="password" name="lozinka" id="lozinka">
+        <span class="errorMsg" id="errorPass"></span>
         <br>
-        <input style="margin-top:10px;" name="submit "type="submit" value="login">
+        <input style="margin-top:10px;" id="submit" name="submit "type="submit" value="login">
+        
         </form>
+        <script type="text/javascript">
+            document.getElementById("submit").onclick=function(event)
+            {
+                sendForm=true;
+                var username=document.getElementById("korisnicko_ime").value;
+                var usernameField=document.getElementById("korisnicko_ime");
+                var usernameError=document.getElementById("errorUname");
+                if(username.length==0)
+                {
+                    sendForm=false;
+                    usernameField.style.border="1px solid red";
+                    usernameError.innerHTML="Korisnicko ime mora biti uneseno";
+                }
+                var lozinka=document.getElementById("lozinka").value;
+                var lozinkaField=document.getElementById("lozinka");
+                var lozinkaError=document.getElementById("errorPass");
+                if(lozinka.length==0)
+                {
+                    sendForm=false;
+                    lozinkaField.style.border="1px solid red";
+                    lozinkaError.innerHTML="Lozinka mora biti unesena";
+                }
+                if(sendForm!=true)
+                {
+                    event.preventDefault();
+                }
+
+            }
+        </script>
         ';
         if(isset($_POST['korisnicko_ime']) && $_POST['lozinka'])
         {
