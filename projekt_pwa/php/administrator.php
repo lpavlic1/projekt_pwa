@@ -33,6 +33,7 @@
         ';
         if(isset($_POST['korisnicko_ime']) && $_POST['lozinka'])
         {
+            $uspjesnaPrijava=false;
             $usernameLogin=$_POST['korisnicko_ime'];
             $passwordLogin=$_POST['lozinka'];
             $query_login="SELECT korisnicko_ime,lozinka,razina FROM korisnik WHERE korisnicko_ime=?";
@@ -152,7 +153,7 @@
             {
                 echo $_SESSION['username']. " prijavljeni ste ali nemate pravo pristupa ovoj stranici!";
             }
-            else if($uspjesnaPrijava=false)
+            else if($uspjesnaPrijava==false)
             {
                 echo "Korisnik ne postoji u bazi!<br>";
                 echo "<a href='registracija.php'>Registracija</a>";
