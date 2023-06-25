@@ -34,22 +34,26 @@
     ?>
     <form class="form-login-reg"action="" method="POST">
         Ime: <br>
-        <input type="text" name="ime" id="ime">    
+        <input type="text" name="ime" id="ime">
+        <span class="errorMsg" id="imeError"></span>    
         <br>
         Prezime: <br>
         <input type="text" name="prezime" id="prezime">
+        <span class="errorMsg" id="prezimeError"></span>   
         <br>
         Korisnicko ime: <br>
         <input type="text" name="username" id="username">
+        <span class="errorMsg" id="usernameError"></span>   
         <br>
         Lozinka: <br>
         <input type="password" name="password1" id="password1">
         <br>
         Ponovljena lozinka: <br>
         <input type="password" name="password2" id="password2">
+        <span class="errorMsg" id="passwordError"></span>   
         <br>
         <span class="errorMsg" id="otherError"></span>
-        <span class="errorMsg" id="passwordError"></span>
+        
         <div style="margin-top: 10px;">
         <button type="reset" value="Poništi">Poništi</button>
         <button name="submit" id="submit" type="submit" value="Prihvati">Prihvati</button>
@@ -59,22 +63,45 @@
         document.getElementById("submit").onclick=function(event){
                 sendForm=true;
                 var password1=document.getElementById("password1").value;
+                var password1Field=document.getElementById("password1");
                 var password2=document.getElementById("password2").value;
+                var password2Field=document.getElementById("password1");
                 var passwordError=document.getElementById("passwordError");
                 if(password1!=password2 || password1.length==0 || password2.length==0)
                 {
                     sendForm=false;
+                    password1Field.style.border="1px solid red";
+                    password2Field.style.border="1px solid red";
                     passwordError.innerHTML="Lozinke se ne podudaraju!";
                     
                 }
                 var ime=document.getElementById("ime").value;
-                var prezime=document.getElementById("prezime").value;
-                var korisnicko_ime=document.getElementById("username").value;
-                var otherError=document.getElementById("otherError");
-                if(ime.length==0 || prezime.length==0 || korisnicko_ime.length==0)
+                var imeField=document.getElementById("ime");
+                var imeError=document.getElementById("imeError");
+                if(ime.length==0)
                 {
                     sendForm=false;
-                    otherError.innerHTML="Ime ili prezime ili korisnicko ime ne smiju biti prazni!";
+                    imeField.style.border="1px solid red";
+                    imeError.innerHTML="Ime mora biti uneseno!";
+                }
+
+                var prezime=document.getElementById("prezime").value;
+                var prezimeField=document.getElementById("prezime");
+                var prezimeError=document.getElementById("prezimeError");
+                if(prezime.length==0)
+                {
+                    sendForm=false;
+                    prezimeField.style.border="1px solid red";
+                    prezimeError.innerHTML="Prezime mora biti uneseno!";
+                }
+                var korisnickoIme=document.getElementById("username").value;
+                var korisnickoImeField=document.getElementById("username");
+                var korisnickoImeError=document.getElementById("usernameError");
+                if(korisnickoIme.length==0)
+                {
+                    sendForm=false;
+                    korisnickoImeField.style.border="1px solid red";
+                    korisnickoImeError.innerHTML="Korisnicko ime mora biti uneseno!";
                 }
                 if(sendForm!=true)
                 {
