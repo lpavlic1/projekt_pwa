@@ -62,6 +62,8 @@
             else
             {
                 $uspjesnaPrijava=false;
+                $_SESSION['username']="";
+                $_SESSION['razina']="";
             }
             ?>
 
