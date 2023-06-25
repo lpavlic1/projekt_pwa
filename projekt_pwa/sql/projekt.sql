@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2023 at 10:51 AM
+-- Generation Time: Jun 25, 2023 at 11:38 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -43,7 +43,9 @@ CREATE TABLE `korisnik` (
 INSERT INTO `korisnik` (`id`, `ime`, `prezime`, `korisnicko_ime`, `lozinka`, `razina`) VALUES
 (1, 'admin', 'admin', 'admin', '$2y$10$EECmu4KDnj9ZFPFk28aQK.suHw4UC6DsDB1qUUTP/T2I2CZy6ys5e', 1),
 (8, 'user1', 'user1', 'user1', '$2y$10$SdIRqrQbI3jf3U8KPaZ0nunFeYK6wxGGadE8.N3PVvEME4XemBWxC', 0),
-(17, 'user', 'user', 'user', '$2y$10$uviOpl5LmcVip4YHRaGOZOJqSl6A3sj3AgHsMBpQNIEdLwrBXmRj.', 0);
+(17, 'user', 'user', 'user', '$2y$10$uviOpl5LmcVip4YHRaGOZOJqSl6A3sj3AgHsMBpQNIEdLwrBXmRj.', 0),
+(18, 'user2', 'user2', 'user2', '$2y$10$NnLDft639kuzvOi61Xm6NOS4QyHtAyFJrsL5LMwZCodp6g652OJtu', 0),
+(22, 'user4', 'user4', 'user4', '$2y$10$RLQA896.nstYFGMoDMJ0uO0OoMzQ5YC4j0uG7zjaIJvHN2WfG1GYK', 0);
 
 -- --------------------------------------------------------
 
@@ -99,13 +101,13 @@ ALTER TABLE `vijest`
 -- AUTO_INCREMENT for table `korisnik`
 --
 ALTER TABLE `korisnik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `vijest`
 --
 ALTER TABLE `vijest`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
