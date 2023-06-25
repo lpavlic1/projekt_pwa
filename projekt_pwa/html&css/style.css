@@ -1,0 +1,209 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.banner 
+{
+    text-align: center;
+    vertical-align:middle;
+    background-color: red;
+    height: 100px;
+}
+.banner h1
+{
+    font-size:60px;
+    color: white;
+    margin-right: 20px;
+}
+.banner h3
+{
+    font-size:15px;
+    color: white;
+    margin-top: 40px;
+    padding: 0;
+    
+}
+.container 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.date
+{
+    align-items:flex-start;
+    vertical-align: bottom;
+    width: 15%;
+}
+.title
+{
+    width: 80%;
+}
+.wrapper
+{
+    width: 960px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navigation {
+  background-color: #f2f2f2;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid grey;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #030000;
+  font-weight: bold;
+ 
+  
+}
+.nav-list li:last-child
+{
+  border-right: none;
+}
+
+/* Media Query for Responsive Navigation */
+@media screen and (max-width: 768px) {
+  
+  .wrapper
+  {
+    width: 100%;
+  }
+}
+
+
+  .news
+  {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+  }
+  .news-item
+  {
+    flex-basis: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .news-item img
+  {
+    width: 100%;
+  }
+  .US_WORLD
+  {
+    color: white;
+    background-color: red;
+    padding:10px;
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .news_scope
+  {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    color: red;
+    margin-bottom: 4px;
+  }
+  section
+  {
+    margin:20px 0px 20px 0px;
+  }
+  .news_full_page
+  {
+    padding: 20px;
+  }
+
+ 
+
+.article {
+    margin-bottom: 20px;
+  }
+ .article-img
+ {
+  width: 100%;
+ 
+ }
+ .article-img-main
+ {
+  width: 100%;
+  height: 200px;
+ }
+ h4 a,h4 a:hover
+ {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+ }
+ .article h4
+ {
+  width: 100%;
+ }
+
+form
+{
+  width: 70%;
+  margin:0 auto;
+}
+
+.form-field input,.form-field textarea,.form-field 
+{
+  width: 100%;
+}
+
+section h2
+{
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.date
+{
+  padding-left:20px;
+  margin-bottom: 10px;
+}
+
+.errorMsg
+{
+  color: red;
+}
+
+footer
+{
+  width: 100%;
+  margin-top: auto;
+}
+
+.form-unos
+{
+  margin-bottom: 100px;
+}
+
+.form-login-reg
+{
+  width: 17%;
+  margin: 0 auto;
+}
+
+
